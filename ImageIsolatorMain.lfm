@@ -1,0 +1,181 @@
+object MainForm: TMainForm
+  Left = 168
+  Height = 449
+  Top = 108
+  Width = 596
+  Caption = 'Απομόνωση εικόνας'
+  ClientHeight = 415
+  ClientWidth = 596
+  Color = clBtnFace
+  DesignTimePPI = 168
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Menu = MainMenu1
+  LCLVersion = '1.8.0.6'
+  object Panel2: TPanel
+    Left = 0
+    Height = 415
+    Top = 0
+    Width = 57
+    Align = alLeft
+    BevelOuter = bvNone
+    BorderStyle = bsSingle
+    ClientHeight = 411
+    ClientWidth = 53
+    TabOrder = 0
+    object BGColor: TShape
+      Left = 15
+      Height = 24
+      Top = 14
+      Width = 24
+    end
+    object Label1: TLabel
+      Left = 7
+      Height = 13
+      Top = 38
+      Width = 75
+      Alignment = taCenter
+      Caption = 'Χρώμα φόντου'
+      ParentColor = False
+      WordWrap = True
+    end
+    object CurrColor: TShape
+      Left = 15
+      Height = 24
+      Top = 70
+      Width = 24
+    end
+    object Label2: TLabel
+      Left = 7
+      Height = 13
+      Top = 94
+      Width = 72
+      Alignment = taCenter
+      Caption = 'Τρέχον χρώμα'
+      ParentColor = False
+      WordWrap = True
+    end
+  end
+  object ScrollBox1: TScrollBox
+    Left = 57
+    Height = 415
+    Top = 0
+    Width = 539
+    HorzScrollBar.Page = 105
+    VertScrollBar.Page = 105
+    Align = alClient
+    ClientHeight = 411
+    ClientWidth = 535
+    TabOrder = 1
+    object Image1: TImage
+      Left = 0
+      Height = 105
+      Top = 0
+      Width = 105
+      OnMouseMove = Image1MouseMove
+      OnMouseUp = Image1MouseUp
+    end
+  end
+  object MainMenu1: TMainMenu
+    left = 384
+    top = 8
+    object EditMenu: TMenuItem
+      Caption = '&Επεξεργασία'
+      object EditUndo: TMenuItem
+        Caption = 'Αναίρεση'
+        OnClick = EditUndoClick
+      end
+      object EditRedo: TMenuItem
+        Caption = 'Επανάληψη'
+        OnClick = EditRedoClick
+      end
+      object EditCut: TMenuItem
+        Caption = 'Αποκοπή'
+        OnClick = EditCutClick
+      end
+      object EditCopy: TMenuItem
+        Caption = 'Αντιγραφή'
+        OnClick = EditCopyClick
+      end
+      object EditCopyToFile: TMenuItem
+        Caption = 'Αντιγραφή σε αρχείο...'
+        OnClick = EditCopyToFileClick
+      end
+      object EditPaste: TMenuItem
+        Caption = 'Επικόλληση'
+        OnClick = EditPasteClick
+      end
+      object EditPasteFromFile: TMenuItem
+        Caption = 'Επικόλληση από αρχείο...'
+        OnClick = EditPasteFromFileClick
+      end
+      object EditCapture: TMenuItem
+        Caption = 'Λήψη από την οθόνη...'
+        OnClick = EditCaptureClick
+      end
+    end
+    object ActionsMenu: TMenuItem
+      Caption = 'Ενέργειες'
+      object ActionIsolate: TMenuItem
+        Caption = 'Απομόνωση'
+        OnClick = ActionIsolateClick
+      end
+      object ActionAlign: TMenuItem
+        Caption = 'Στοίχιση'
+        OnClick = ActionAlignClick
+      end
+      object ActionTile: TMenuItem
+        Caption = 'Παράθεση'
+        OnClick = ActionTileClick
+      end
+    end
+    object mnuOptions: TMenuItem
+      Caption = 'Επιλογές'
+      object OptionsCapturing: TMenuItem
+        Caption = 'Προσαρμογή λήψης εικόνας...'
+      end
+      object OptionBGColor: TMenuItem
+        Caption = 'Χρώμα φόντου...'
+        OnClick = OptionBGColorClick
+      end
+    end
+  end
+  object ColorDialog1: TColorDialog
+    Color = clWhite
+    CustomColors.Strings = (
+      'ColorA=000000'
+      'ColorB=000080'
+      'ColorC=008000'
+      'ColorD=008080'
+      'ColorE=800000'
+      'ColorF=800080'
+      'ColorG=808000'
+      'ColorH=808080'
+      'ColorI=C0C0C0'
+      'ColorJ=0000FF'
+      'ColorK=00FF00'
+      'ColorL=00FFFF'
+      'ColorM=FF0000'
+      'ColorN=FF00FF'
+      'ColorO=FFFF00'
+      'ColorP=FFFFFF'
+      'ColorQ=C0DCC0'
+      'ColorR=F0CAA6'
+      'ColorS=F0FBFF'
+      'ColorT=A4A0A0'
+    )
+    left = 480
+    top = 8
+  end
+  object OpenPictureDialog1: TOpenPictureDialog
+    Filter = 'All (*.bmp;*.ico;*.emf;*.wmf)|*.bmp;*.ico;*.emf;*.wmf|Bitmaps (*.bmp)|*.bmp|Icons (*.ico)|*.ico|Enhanced Metafiles (*.emf)|*.emf|Metafiles (*.wmf)|*.wmf'
+    left = 416
+    top = 8
+  end
+  object SavePictureDialog1: TSavePictureDialog
+    Filter = 'All (*.bmp;*.ico;*.emf;*.wmf)|*.bmp;*.ico;*.emf;*.wmf|Bitmaps (*.bmp)|*.bmp|Icons (*.ico)|*.ico|Enhanced Metafiles (*.emf)|*.emf|Metafiles (*.wmf)|*.wmf'
+    left = 448
+    top = 8
+  end
+end

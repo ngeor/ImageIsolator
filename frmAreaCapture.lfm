@@ -1,0 +1,24 @@
+object AreaCapturer: TAreaCapturer
+  Left = 381
+  Top = 101
+  Cursor = crCross
+  HelpContext = 30
+  BorderIcons = []
+  BorderStyle = bsNone
+  Caption = 'AreaCapturer'
+  ClientHeight = 87
+  ClientWidth = 224
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -10
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  FormStyle = fsStayOnTop
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  OnMouseDown = FormMouseDown
+  OnMouseMove = FormMouseMove
+  OnMouseUp = FormMouseUp
+  OnPaint = FormPaint
+  PixelsPerInch = 96
+end
