@@ -321,7 +321,7 @@ begin
     end;
   end
   else
-    MessageDlg('Το πρόχειρο δεν έχει εικόνα', mtError, [mbOk], 0);
+    MessageDlg('Το πρόχειρο δεν έχει εικόνα', mtError, [mbOK], 0);
 end;
 
 procedure TMainForm.EditPasteFromFileClick(Sender: TObject);
