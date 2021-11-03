@@ -44,8 +44,7 @@ type
     EditCapture: TMenuItem;
     procedure OptionBGColorClick(Sender: TObject);
     procedure Image1MouseMove(Sender: TObject; Shift: TShiftState; X, Y: integer);
-    procedure Image1MouseUp(Sender: TObject; Button: TMouseButton;
-      Shift: TShiftState; X, Y: integer);
+    procedure Image1MouseUp(Sender: TObject; Button: TMouseButton; Shift: TShiftState; X, Y: integer);
     procedure ActionIsolateClick(Sender: TObject);
     procedure ActionAlignClick(Sender: TObject);
     procedure ActionTileClick(Sender: TObject);
@@ -130,8 +129,7 @@ begin
   CurrColor.Brush.Color := Image1.Picture.Bitmap.Canvas.Pixels[x, y];
 end;
 
-procedure TMainForm.Image1MouseUp(Sender: TObject; Button: TMouseButton;
-  Shift: TShiftState; X, Y: integer);
+procedure TMainForm.Image1MouseUp(Sender: TObject; Button: TMouseButton; Shift: TShiftState; X, Y: integer);
 begin
   BGColor.Brush.Color := Image1.Picture.Bitmap.Canvas.Pixels[x, y];
 end;
@@ -242,8 +240,8 @@ begin
     b.Canvas.Brush.Color := BGColor.Brush.Color;
     b.Canvas.FillRect(Bounds(0, 0, w, h));
     R2 := Bounds(0, 0, Image1.Width, Image1.Height);
-    R1 := Rect((w - Image1.Width) div 2, (h - Image1.Height) div 2,
-      (w + Image1.Width) div 2, (h + Image1.Height) div 2);
+    R1 := Rect((w - Image1.Width) div 2, (h - Image1.Height) div 2, (w + Image1.Width) div
+      2, (h + Image1.Height) div 2);
     b.Canvas.CopyRect(R1, Image1.Canvas, R2);
     AssignBitmap(b);
     b.Free;
