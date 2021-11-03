@@ -11,11 +11,9 @@ uses
 type
   TAreaCapturer = class(TForm)
     procedure FormCreate(Sender: TObject);
-    procedure FormMouseDown(Sender: TObject; Button: TMouseButton;
-      Shift: TShiftState; X, Y: integer);
+    procedure FormMouseDown(Sender: TObject; Button: TMouseButton; Shift: TShiftState; X, Y: integer);
     procedure FormMouseMove(Sender: TObject; Shift: TShiftState; X, Y: integer);
-    procedure FormMouseUp(Sender: TObject; Button: TMouseButton;
-      Shift: TShiftState; X, Y: integer);
+    procedure FormMouseUp(Sender: TObject; Button: TMouseButton; Shift: TShiftState; X, Y: integer);
     procedure FormPaint(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
   private
@@ -88,8 +86,7 @@ begin
   SetBounds(0, 0, Screen.Width, Screen.Height);
 end;
 
-procedure TAreaCapturer.FormMouseDown(Sender: TObject; Button: TMouseButton;
-  Shift: TShiftState; X, Y: integer);
+procedure TAreaCapturer.FormMouseDown(Sender: TObject; Button: TMouseButton; Shift: TShiftState; X, Y: integer);
 begin
   if mbLeft = Button then
   begin
@@ -102,8 +99,7 @@ begin
   end;
 end;
 
-procedure TAreaCapturer.FormMouseMove(Sender: TObject; Shift: TShiftState;
-  X, Y: integer);
+procedure TAreaCapturer.FormMouseMove(Sender: TObject; Shift: TShiftState; X, Y: integer);
 begin
   if fDragging then
   begin
@@ -114,8 +110,7 @@ begin
   end;
 end;
 
-procedure TAreaCapturer.FormMouseUp(Sender: TObject; Button: TMouseButton;
-  Shift: TShiftState; X, Y: integer);
+procedure TAreaCapturer.FormMouseUp(Sender: TObject; Button: TMouseButton; Shift: TShiftState; X, Y: integer);
 begin
   if fDragging then
   begin
