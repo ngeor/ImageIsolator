@@ -12,16 +12,16 @@ type
   TAreaCapturer = class(TForm)
     procedure FormCreate(Sender: TObject);
     procedure FormMouseDown(Sender: TObject; Button: TMouseButton;
-      Shift: TShiftState; X, Y: integer);
-    procedure FormMouseMove(Sender: TObject; Shift: TShiftState; X, Y: integer);
+      Shift: TShiftState; X, Y: Integer);
+    procedure FormMouseMove(Sender: TObject; Shift: TShiftState; X, Y: Integer);
     procedure FormMouseUp(Sender: TObject; Button: TMouseButton;
-      Shift: TShiftState; X, Y: integer);
+      Shift: TShiftState; X, Y: Integer);
     procedure FormPaint(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
   private
     { Private declarations }
-    fDragging: boolean;
-    X1, Y1, X2, Y2: integer;
+    fDragging: Boolean;
+    X1, Y1, X2, Y2: Integer;
     procedure WMEraseBkGnd(var Msg: TWMEraseBkGnd); message WM_ERASEBKGND;
     procedure UpdateRect;
   public
@@ -34,7 +34,7 @@ implementation
 
 {$R *.lfm}
 
-function Max(x, y: integer): integer;
+function Max(x, y: Integer): Integer;
 begin
   if x > y then
     Result := x
@@ -42,7 +42,7 @@ begin
     Result := y;
 end;
 
-function Min(x, y: integer): integer;
+function Min(x, y: Integer): Integer;
 begin
   if x < y then
     Result := x
@@ -50,9 +50,9 @@ begin
     Result := y;
 end;
 
-procedure Swap(var x, y: integer);
+procedure Swap(var x, y: Integer);
 var
-  z: integer;
+  z: Integer;
 begin
   z := x;
   x := y;
@@ -89,7 +89,7 @@ begin
 end;
 
 procedure TAreaCapturer.FormMouseDown(Sender: TObject; Button: TMouseButton;
-  Shift: TShiftState; X, Y: integer);
+  Shift: TShiftState; X, Y: Integer);
 begin
   if mbLeft = Button then
   begin
@@ -103,7 +103,7 @@ begin
 end;
 
 procedure TAreaCapturer.FormMouseMove(Sender: TObject; Shift: TShiftState;
-  X, Y: integer);
+  X, Y: Integer);
 begin
   if fDragging then
   begin
@@ -115,7 +115,7 @@ begin
 end;
 
 procedure TAreaCapturer.FormMouseUp(Sender: TObject; Button: TMouseButton;
-  Shift: TShiftState; X, Y: integer);
+  Shift: TShiftState; X, Y: Integer);
 begin
   if fDragging then
   begin
