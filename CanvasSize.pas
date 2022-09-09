@@ -26,13 +26,13 @@ type
 var
   frmCanvasSize: TfrmCanvasSize;
 
-function GetNewCanvasSize(var AWidth, AHeight: integer): boolean;
+function GetNewCanvasSize(var AWidth, AHeight: Integer): Boolean;
 
 implementation
 
 {$R *.lfm}
 
-function GetNewCanvasSize(var AWidth, AHeight: integer): boolean;
+function GetNewCanvasSize(var AWidth, AHeight: Integer): Boolean;
 begin
   with frmCanvasSize do
   begin

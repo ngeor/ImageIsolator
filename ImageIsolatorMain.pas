@@ -43,9 +43,9 @@ type
     EditPasteFromFile: TMenuItem;
     EditCapture: TMenuItem;
     procedure OptionBGColorClick(Sender: TObject);
-    procedure Image1MouseMove(Sender: TObject; Shift: TShiftState; X, Y: integer);
+    procedure Image1MouseMove(Sender: TObject; Shift: TShiftState; X, Y: Integer);
     procedure Image1MouseUp(Sender: TObject; Button: TMouseButton;
-      Shift: TShiftState; X, Y: integer);
+      Shift: TShiftState; X, Y: Integer);
     procedure ActionIsolateClick(Sender: TObject);
     procedure ActionAlignClick(Sender: TObject);
     procedure ActionTileClick(Sender: TObject);
@@ -125,13 +125,13 @@ begin
     BGColor.Brush.Color := ColorDialog1.Color;
 end;
 
-procedure TMainForm.Image1MouseMove(Sender: TObject; Shift: TShiftState; X, Y: integer);
+procedure TMainForm.Image1MouseMove(Sender: TObject; Shift: TShiftState; X, Y: Integer);
 begin
   CurrColor.Brush.Color := Image1.Picture.Bitmap.Canvas.Pixels[x, y];
 end;
 
 procedure TMainForm.Image1MouseUp(Sender: TObject; Button: TMouseButton;
-  Shift: TShiftState; X, Y: integer);
+  Shift: TShiftState; X, Y: Integer);
 begin
   BGColor.Brush.Color := Image1.Picture.Bitmap.Canvas.Pixels[x, y];
 end;
@@ -139,8 +139,8 @@ end;
 procedure TMainForm.ActionIsolateClick(Sender: TObject);
 var
   R, Q: TRect;
-  x, y: integer;
-  Found: boolean;
+  x, y: Integer;
+  Found: Boolean;
   b: TBitmap;
 begin
   { search for left side }
@@ -227,7 +227,7 @@ end;
 
 procedure TMainForm.ActionAlignClick(Sender: TObject);
 var
-  w, h: integer;
+  w, h: Integer;
   b: TBitmap;
   R1: TRect;
   R2: TRect;
@@ -252,7 +252,7 @@ end;
 
 procedure TMainForm.ActionTileClick(Sender: TObject);
 var
-  w, h: integer;
+  w, h: Integer;
   b: TBitmap;
   R1: TRect;
   R2: TRect;
